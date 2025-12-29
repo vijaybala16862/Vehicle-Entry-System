@@ -1,48 +1,69 @@
-# Vehicle Entry System — Backend
+# Vehicle Entry System
 
-Project Description  
-The "Vehicle Entry System" provides backend services for managing vehicle entries and exits in a facility — for example, a gate-entry system for a factory, campus or restricted area.  
-It supports recording vehicle entry/exit events, storing vehicle and owner/driver details, and exposing APIs for front-end or gate-terminal integration.
+## Overview
+The Vehicle Entry System is an application designed to manage and track vehicle entry and exit activities within a secured facility such as an office campus, factory, warehouse, or residential complex.  
+It replaces manual vehicle logbooks with a structured digital solution, ensuring accuracy, traceability, and ease of access.
 
-Motivation & Purpose  
-Manual record-keeping of vehicles entering/exiting a facility is tedious, error-prone, and hard to audit.  
-This project automates vehicle entry / exit logging, ensures consistent data storage, and enables easy retrieval of vehicle history, counts, and status.  
-The backend can be used with a web-based front end, mobile app, or gate terminal UI.
+This repository contains both backend and frontend components required for vehicle entry management.
 
-Tech Stack & Dependencies  
-- Backend language / framework: *(specify — e.g. Node.js + Express / Python + Flask / Java + Spring Boot / etc.)*  
-- Database: *(specify — e.g. MySQL, PostgreSQL, MongoDB, etc.)*  
-- ORM / database library: *(if used — e.g. Sequelize, SQLAlchemy, etc.)*  
-- Other dependencies / middleware: *(authentication, logging, body-parsers, etc.)*  
+## Key Objectives
+- Digitally record vehicle entry and exit details
+- Maintain a centralized vehicle movement history
+- Enable easy auditing and data retrieval
+- Provide a scalable backend for UI or gate terminal integration
 
-You should update this section with exact versions, configuration requirements (e.g. `.env` vars), and any external services used.
+## Features
+- Vehicle entry registration
+- Vehicle exit registration
+- Timestamp-based tracking
+- Persistent data storage
+- REST-based backend APIs
+- Extendable and modular design
 
-Getting Started — Installation & Running Locally  
+## Technology Stack
+- Backend: Java / Spring Boot
+- Frontend: HTML, CSS, JavaScript
+- Database: Relational Database (MySQL / PostgreSQL)
+- API Architecture: REST
+- Build Tool: Maven
+- 
+## Prerequisites
+- Java (JDK 8 or above)
+- Database server (MySQL / PostgreSQL)
+- Git
+- IDE (IntelliJ IDEA / Eclipse / VS Code)
 
-### Prerequisites  
-- Install [Node.js / Python / Java / …] (version X.X or higher)  
-- Install and configure the database (e.g. MySQL, PostgreSQL)  
-- Ensure you have required credentials (if any) — e.g. DB host, username/password, environment variables  
+Ensure database credentials and configuration files are updated before running the application.
 
-### Setup  
-```bash
-# Clone the repo
-git clone https://github.com/vijaybala16862/Vehicle-Entry-System.git
-cd Vehicle-Entry-System/Backend
+## Application Usage
+- Register vehicle entry when a vehicle enters the premises
+- Register vehicle exit when a vehicle leaves the premises
+- View stored vehicle movement data through APIs or UI
 
-# Install dependencies
-npm install            # for Node.js/Express  
-# or
-pip install -r requirements.txt    # for Python / Flask  
-# or
-# mvn install                    # for Java / Spring Boot  
+## Sample API Endpoints
+| Method | Endpoint             | Description |
+|-------|----------------------|-------------|
+| POST  | /api/entry           | Register vehicle entry |
+| POST  | /api/exit            | Register vehicle exit |
+| GET   | /api/vehicles        | Get all vehicle records |
+| GET   | /api/vehicles/{id}   | Get vehicle details |
 
-# Configure environment variables
-# Copy example config (e.g. .env.example) to .env and update DB credentials, ports, etc.
+## Future Enhancements
+- Authentication and authorization
+- Admin dashboard
+- Real-time vehicle count
+- Report export (PDF / CSV)
+- Logging and audit trail
 
-# Run the application
-npm start              # or `npm run dev`
-# or
-python app.py          # or `flask run`
-# or
-# mvn spring-boot:run
+## Contribution Guidelines
+1. Fork the repository
+2. Create a new feature branch
+3. Commit changes with meaningful messages
+4. Raise a pull request for review
+
+## License
+This project does not currently include a license. Add a license file if open-source usage is intended.
+
+## Author
+Vijay Bala  
+GitHub: https://github.com/vijaybala16862
